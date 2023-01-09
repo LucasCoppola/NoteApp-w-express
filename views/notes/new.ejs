@@ -1,0 +1,14 @@
+<%- include('partials/head') %>
+<body class="bg-dark">
+    <h1 class="container text-center mb-4 text-white">Write a new Note</h1>
+    <form action="/notes" method="post" class="form-floating">
+        <section class="mx-auto w-75  d-flex flex-column">
+            <input class="form-control" type="text" name="title" placeholder="Title">
+            <br>
+            <textarea class="form-control form-control-sm" name="note" cols="30" rows="5" placeholder="Note"></textarea>
+            <br>
+            <button class="btn btn-primary" type="submit">Add</button>
+        </section>        
+    </form>
+</body>
+</html>

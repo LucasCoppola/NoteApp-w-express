@@ -1,0 +1,21 @@
+<%- include('partials/head') %>
+<body class="bg-dark">
+    <h1 class="text-center text-white mb-3">Edit Note</h1>
+    <form method="post" action="/notes/<%= note.id %>?_method=PATCH"  
+    class="form-floating mx-auto w-50 d-flex flex-column">
+        <textarea class="form-control overflow-hidden" name="title">
+            <%= note.title %>
+        </textarea>
+        <label class="form-label" for="title">Edit the title here:</label>
+        <br>
+        <div class="form-floating">
+            <textarea class="form-control" name="note" style="height: 100px">
+                <%= note.note %>
+            </textarea>
+            <label class="form-label" for="note">Edit the note here</label>  
+        </div>
+        <br>
+        <button class="btn btn-primary" type="submit">Edit</button>
+    </form>
+</body>
+</html>

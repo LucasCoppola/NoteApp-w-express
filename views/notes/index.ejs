@@ -1,0 +1,18 @@
+<%- include('partials/head') %> 
+  <body class="bg-dark">
+      <h1 class="text-center text-white">Notes</h1>
+      <a class="btn btn-light position-absolute start-50" style="margin-left: -25px;" href="/notes/new" role="button">Add</a>
+      <% for(let n of notes){ %>
+        <div class="container card mb-3">
+          <h4 class="card-title mt-2"><%= n.title %></h4>
+          <p class="card-text"><%= n.note %> </p>
+          <div class="container d-inline-flex p-2 justify-content-start align-items-center">
+              <a href="/notes/<%= n.id %>"><i class="gg-file-document me-4"></i></a>
+              <a href="/notes/<%= n.id %>/edit"><i class="gg-pen me-4"></i> </a>
+              <a href="/notes/<%= n.id %>"><i class="gg-close me-4"></i></a>
+              <a href="/notes/new"><i class="gg-math-plus position-absolute bottom-20 end-0 me-4"></i></a> 
+          </div>
+        </div>
+      <% } %>
+  </body>
+</html>

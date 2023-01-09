@@ -1,0 +1,20 @@
+<%- include('partials/head') %>
+<body class="bg-dark">
+    <h1 class="text-center text-white mb-3">Note Details</h1>
+
+    <div class="card container mx-auto w-50">
+        <div class="card-header">
+            Title: <%= note.title %>
+        </div>
+        <div class="card-body">
+          <blockquote class="blockquote mb-0">
+            <p>Note: <%=  note.note %></p>
+            <footer class="blockquote-footer">Id: <%= note.id %> </footer>
+          </blockquote>
+        </div>
+        <form action="/notes/<%= note.id %>?_method=DELETE" method="post" class="ms-3 mb-2">
+            <button class="btn btn-outline-danger">Delete</button>
+        </form>
+    </div>
+</body>
+</html>
